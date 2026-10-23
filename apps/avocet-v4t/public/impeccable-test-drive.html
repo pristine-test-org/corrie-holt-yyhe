@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Avocet helps · Avocet</title>
+    <style>
+      body { margin: 0; font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; --accent: #2f7d4f; }
+      header, main, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      header { display: flex; justify-content: space-between; align-items: center; }
+      header a { color: var(--accent); }
+      .mark { font-weight: 700; color: var(--accent); }
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem); margin: 2rem 0 1rem;
+        /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+        background: linear-gradient(90deg, #2f7d4f, #7b3fe4); -webkit-background-clip: text; background-clip: text; color: transparent;
+      }
+      .steps { display: grid; gap: 0.75rem; padding: 0; list-style: none; }
+      .steps li { background: #fff; border: 1px solid #e5e5e0; border-radius: 0.5rem; padding: 0.9rem 1rem; }
+      .steps strong { display: block; }
+      .steps span {
+        /* Intentional, for Impeccable's test drive: low-contrast text, light grey on a near-white card. */
+        color: #c4c4c4;
+      }
+      .back {
+        /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+        font-size: 10px;
+      }
+      .bar {
+        height: 0.5rem; width: 30%; background: var(--accent); border-radius: 0.25rem;
+        /* Intentional, for Impeccable's test drive: transition on a layout property. */
+        transition: width 0.3s;
+      }
+      .bar:hover { width: 100%; }
+      .edge {
+        /* Intentional, for Impeccable's test drive: body text flush with the viewport edges, no background. */
+        margin: 2rem calc(50% - 50vw); padding: 0; max-width: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <span class="mark">Avocet</span>
+      <a class="back" href="/">Back to the front door</a>
+    </header>
+    <main>
+      <h1>How Avocet helps</h1>
+      <p>Avocet keeps one calm page for everything a visitor needs to know, so nobody has to dig through menus to find the shared list.</p>
+      <div class="bar" role="presentation"></div>
+      <ol class="steps">
+        <li><strong>Open the page</strong><span>Everything starts on a single screen with no sign-up.</span></li>
+        <li><strong>Read the list</strong><span>The latest five items from the shared list appear in order.</span></li>
+        <li><strong>Check things off</strong><span>Finished items carry a tick so progress is clear at a glance.</span></li>
+      </ol>
+      <p class="edge">Every item you see comes straight from the shared list, so what you read on this page is always the same as what the rest of the team sees.</p>
+    </main>
+    <footer>Avocet</footer>
+  </body>
+</html>
