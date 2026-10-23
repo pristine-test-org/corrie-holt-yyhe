@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading the board · Dunlin</title>
+    <style>
+      body { margin: 0; font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; --accent: #3b4bc8; }
+      header, main, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      header { display: flex; justify-content: space-between; align-items: center; }
+      header a { color: var(--accent); }
+      .mark { font-weight: 700; color: var(--accent); }
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem); margin: 2rem 0 1rem;
+        /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+        background: linear-gradient(90deg, #3b4bc8, #e4573f); -webkit-background-clip: text; background-clip: text; color: transparent;
+      }
+      table { width: 100%; border-collapse: collapse; background: #fff; }
+      th, td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid #e5e5e0; }
+      td.note {
+        /* Intentional, for Impeccable's test drive: low-contrast text, light grey on white. */
+        color: #c4c4c4;
+      }
+      .back {
+        /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+        font-size: 10px;
+      }
+      .bar {
+        height: 0.5rem; width: 30%; background: var(--accent); border-radius: 0.25rem; margin: 1rem 0;
+        /* Intentional, for Impeccable's test drive: transition on a layout property. */
+        transition: width 0.3s;
+      }
+      .bar:hover { width: 100%; }
+      .edge {
+        /* Intentional, for Impeccable's test drive: body text flush with the viewport edges, no background. */
+        margin: 2rem calc(50% - 50vw); padding: 0; max-width: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <span class="mark">Dunlin</span>
+      <a class="back" href="/">Back to the board</a>
+    </header>
+    <main>
+      <h1>Reading the board</h1>
+      <p>Dunlin lays out everything on the shared list in one place, so you can see what is open and what is done without scrolling.</p>
+      <div class="bar" role="presentation"></div>
+      <table>
+        <thead><tr><th>Mark</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>Plain text</td><td class="note">Still open and waiting for someone.</td></tr>
+          <tr><td>✓ before the title</td><td class="note">Finished and kept for reference.</td></tr>
+          <tr><td>Muted line</td><td class="note">A note about the list itself, such as it being empty.</td></tr>
+        </tbody>
+      </table>
+      <p class="edge">The board shows the five most recent items, newest first, and it reads them from the shared list each time the page opens.</p>
+    </main>
+    <footer>Dunlin</footer>
+  </body>
+</html>
